@@ -9,7 +9,6 @@ NUMBER_REGEX = r"^-?\d+(\.\d+)?$"
 
 GENDER_CATEGORY = ["male", "female", "others"]
 LOGGER_LEVEL_DEBUG = 10
-LOG_FILE_PATH = "C:\Study Material"  # todo move to .env
 INVALID_DATE_FORMATE = "Invalid date format. Please enter the date in 'YYYY-MM-DD' format."
 INVALID_NAME_FORMATE = ("Invalid name format. The name contains First name and last name. "
                         "Last name must not be initial.")

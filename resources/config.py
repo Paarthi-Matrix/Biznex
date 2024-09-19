@@ -1,13 +1,15 @@
 import logging
-from logging.handlers import RotatingFileHandler
 import os
-from constant.constant import LOGGER_LEVEL_DEBUG, LOG_FILE_PATH
+from logging.handlers import RotatingFileHandler
+from dotenv import load_dotenv
+from constant.constant import LOGGER_LEVEL_DEBUG
 from util.trace_id_utils import TraceIDFormatter
 
+load_dotenv()
 
 logger = logging.getLogger("BizNex")
 logger.setLevel(LOGGER_LEVEL_DEBUG)
-log_directory = LOG_FILE_PATH
+log_directory = os.getenv("LOG_FILE_PATH")
 if not os.path.exists(log_directory):
     os.makedirs(log_directory)
 
